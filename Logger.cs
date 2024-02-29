@@ -98,7 +98,7 @@ public class Logger
             _fullFilePath = filePath + "\\" + _fileName + _ext;
             string contentOld = DumpStreamReader(_fullFilePath);
             StreamWriter File = new(_fullFilePath);
-            File.WriteLine(contentOld + content);
+            File.WriteLine(contentOld + content + $" | {DateTime.Now}");
             File.Close();
         }
         else
