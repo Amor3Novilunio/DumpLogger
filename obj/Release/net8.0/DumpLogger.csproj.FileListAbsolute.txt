@@ -1,0 +1,11 @@
+C:\Users\Setapai\Desktop\New folder\DumpLogger\bin\Release\net8.0\DumpLogger.deps.json
+C:\Users\Setapai\Desktop\New folder\DumpLogger\bin\Release\net8.0\DumpLogger.dll
+C:\Users\Setapai\Desktop\New folder\DumpLogger\bin\Release\net8.0\DumpLogger.pdb
+C:\Users\Setapai\Desktop\New folder\DumpLogger\obj\Release\net8.0\DumpLogger.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Setapai\Desktop\New folder\DumpLogger\obj\Release\net8.0\DumpLogger.AssemblyInfoInputs.cache
+C:\Users\Setapai\Desktop\New folder\DumpLogger\obj\Release\net8.0\DumpLogger.AssemblyInfo.cs
+C:\Users\Setapai\Desktop\New folder\DumpLogger\obj\Release\net8.0\DumpLogger.csproj.CoreCompileInputs.cache
+C:\Users\Setapai\Desktop\New folder\DumpLogger\obj\Release\net8.0\DumpLogger.dll
+C:\Users\Setapai\Desktop\New folder\DumpLogger\obj\Release\net8.0\refint\DumpLogger.dll
+C:\Users\Setapai\Desktop\New folder\DumpLogger\obj\Release\net8.0\DumpLogger.pdb
+C:\Users\Setapai\Desktop\New folder\DumpLogger\obj\Release\net8.0\ref\DumpLogger.dll
