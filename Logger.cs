@@ -2,7 +2,7 @@
 using System.Reflection;
 
 // Crud Logger 
-public class DumpLogger
+public class Logger
 {
     private readonly string _path = Directory.GetCurrentDirectory() + "\\Dump\\Logger\\";
     private string _ext = "txt";
@@ -10,11 +10,11 @@ public class DumpLogger
 
     private string? _fullFilePath;
     // Constructor
-    public DumpLogger(string loggerFolder) => _path += loggerFolder;
+    public Logger(string loggerFolder) => _path += loggerFolder;
     // Methods
     public void Create(string content)
     {
-        MethodBase? GetMethod = MethodBase.GetCurrentMethod();
+        MethodBase? GetMethod = MethodBase.GetCurrentMethod()!;
         if (GetMethod!.Name is not null)
         {
             DumpStreamWriter(content: content, method: GetMethod!.Name);
@@ -22,7 +22,7 @@ public class DumpLogger
     }
     public void Create(string content, string fileExtension)
     {
-        MethodBase? GetMethod = MethodBase.GetCurrentMethod();
+        MethodBase? GetMethod = MethodBase.GetCurrentMethod()!;
         if (GetMethod!.Name is not null)
         {
             _ext = fileExtension;
@@ -31,7 +31,7 @@ public class DumpLogger
     }
     public void Read(string content)
     {
-        MethodBase? GetMethod = MethodBase.GetCurrentMethod();
+        MethodBase? GetMethod = MethodBase.GetCurrentMethod()!;
         if (GetMethod!.Name is not null)
         {
             DumpStreamWriter(content: content, method: GetMethod!.Name);
@@ -39,7 +39,7 @@ public class DumpLogger
     }
     public void Read(string content, string fileExtension)
     {
-        MethodBase? GetMethod = MethodBase.GetCurrentMethod();
+        MethodBase? GetMethod = MethodBase.GetCurrentMethod()!;
         if (GetMethod!.Name is not null)
         {
             _ext = fileExtension;
@@ -48,7 +48,7 @@ public class DumpLogger
     }
     public void Update(string content)
     {
-        MethodBase? GetMethod = MethodBase.GetCurrentMethod();
+        MethodBase? GetMethod = MethodBase.GetCurrentMethod()!;
         if (GetMethod!.Name is not null)
         {
             DumpStreamWriter(content: content, method: GetMethod!.Name);
@@ -56,7 +56,7 @@ public class DumpLogger
     }
     public void Update(string content, string fileExtension)
     {
-        MethodBase? GetMethod = MethodBase.GetCurrentMethod();
+        MethodBase? GetMethod = MethodBase.GetCurrentMethod()!;
         if (GetMethod!.Name is not null)
         {
             _ext = fileExtension;
@@ -65,7 +65,7 @@ public class DumpLogger
     }
     public void Delete(string content)
     {
-        MethodBase? GetMethod = MethodBase.GetCurrentMethod();
+        MethodBase? GetMethod = MethodBase.GetCurrentMethod()!;
         if (GetMethod!.Name is not null)
         {
             DumpStreamWriter(content: content, method: GetMethod!.Name);
@@ -73,7 +73,7 @@ public class DumpLogger
     }
     public void Delete(string content, string fileExtension)
     {
-        MethodBase? GetMethod = MethodBase.GetCurrentMethod();
+        MethodBase? GetMethod = MethodBase.GetCurrentMethod()!;
         if (GetMethod!.Name is not null)
         {
             _ext = fileExtension;
@@ -83,7 +83,7 @@ public class DumpLogger
 
     private void DumpError(string content)
     {
-        MethodBase? GetMethod = MethodBase.GetCurrentMethod();
+        MethodBase? GetMethod = MethodBase.GetCurrentMethod()!;
         if (GetMethod!.Name is not null)
         {
             DumpStreamWriter(content: "Method Status Not Found", method: GetMethod!.Name);
@@ -127,12 +127,15 @@ public class DumpLogger
 
     private static string DumpStreamReader(string file)
     {
-        StreamReader reader = new(file);
-        string dataEntry = reader.ReadToEnd();
-        reader.Close();
+        string dataEntry = "";
+        if (File.Exists(file))
+        {
+            StreamReader reader = new(file);
+            dataEntry = reader.ReadToEnd();
+            reader.Close();
+        }
         if (dataEntry.Length <= 0)
         {
-            dataEntry = "";
             return dataEntry;
         }
         return dataEntry;

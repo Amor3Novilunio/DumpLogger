@@ -9,3 +9,4 @@ C:\Users\Setapai\Desktop\New folder\DumpLogger\obj\Release\net8.0\DumpLogger.dll
 C:\Users\Setapai\Desktop\New folder\DumpLogger\obj\Release\net8.0\refint\DumpLogger.dll
 C:\Users\Setapai\Desktop\New folder\DumpLogger\obj\Release\net8.0\DumpLogger.pdb
 C:\Users\Setapai\Desktop\New folder\DumpLogger\obj\Release\net8.0\ref\DumpLogger.dll
+C:\Users\Setapai\Desktop\New folder\DumpLogger\obj\Release\net8.0\DumpLogger.sourcelink.json

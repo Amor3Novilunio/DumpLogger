@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>DumpLogger</id>
+    <version>1.0.1</version>
+    <authors>Amor Novilunio III</authors>
+    <description>Package Description</description>
+    <repository type="git" commit="bc49827b7a1bb9a6ea903a711d045cb6b9381367" />
+    <dependencies>
+      <group targetFramework="net8.0" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="C:\Users\Setapai\Desktop\New folder\DumpLogger\bin\Release\net8.0\DumpLogger.dll" target="lib\net8.0\DumpLogger.dll" />
+  </files>
+</package>
